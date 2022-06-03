@@ -1,0 +1,60 @@
+.game__panel{
+    text-align: center;
+}
+
+.game__container{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    width: 306px;
+    height: 306px;
+    background-color: bisque;
+    margin: 60px auto;
+    justify-content: center;
+    align-content: center;
+}
+.cell{
+    background-color: gray;
+    margin: 2px;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 0 1px #333333;
+    border: 1px solid #333333;
+    cursor: pointer;
+    position: relative;
+}
+
+.cell[data-player-id="X"]::before{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\274c"; /* use the hex value here... */
+    font-size: 50px; 
+    color: #FFF;
+    line-height: 100px;
+    text-align: center;
+}
+
+.cell[data-player-id="O"]::before{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\0041E"; /* use the hex value here... */
+    font-size: 60px; 
+    color: greenyellow;
+    line-height: 100px;
+    text-align: center;
+    text-shadow: 1px 1px 8px black;
+}
+
+
+.result{
+    font-weight: 600;
+}
+
+.player__turn > span{
+    color: red;
+}
